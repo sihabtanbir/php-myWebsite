@@ -34,7 +34,7 @@ li{
     display: inline-block;
 }
 .slider .carousel-item img{
-    height: 400px !important
+    height: 500px !important
     
 }
 footer{
@@ -54,7 +54,7 @@ footer{
 
 
 body{
-    overflow: hidden;
+    
 }
 /* admin panel */
 

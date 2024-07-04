@@ -4,5 +4,5 @@
     define('HOST', 'localhost');
     define('USER','root');
     define('PASSWORD',''); 
-    define('DATABASE','my-website');
+    define('DATABASE','my_site');
 ?>
