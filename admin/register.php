@@ -18,7 +18,7 @@
 <body>
     
     <div class="container py-5">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-md-6 m-0" >
 
                 <span>

@@ -1,5 +1,17 @@
 <?php
+
+
+include("../classes/adminLogin.php");
+$al = new AdminLogin();
  include 'connect.php';
+
+ if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $email = $_POST['email'];
+    $password = ($_POST['password']);
+
+    $checkLogin = $al->loginUser($email, $password);  
+
+ }
 ?>
 
 <!DOCTYPE html>
@@ -12,13 +24,29 @@
 <body>
     
     <div class="container py-5">
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-md-6">
+
+            <span>
+                    <?php
+                     if(isset($checkLogin)){
+                    ?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        
+                        <?= $checkLogin ?>
+                        
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    <?php 
+                     }
+                    ?>
+                </span>
+
                 <div class="card">
                     <h5 class="card-header">Login Form</h5>
                     <div class="card-body">
 
-                    <form>
+                    <form method="POST" >
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail1" name="email"   >
